@@ -2,7 +2,8 @@
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
@@ -19,5 +20,11 @@
       "@environments/*": ["src/environments/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/vue-shims.d.ts",
+    "src/vite-env.d.ts"
+  ]
 }
